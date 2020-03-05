@@ -1,9 +1,10 @@
-﻿using System.Net;
+﻿using System.Collections.Generic;
+using System.Net;
 using Bulksign.Extensibility;
 
 namespace CustomIpGeolocationProvider
 {
-	public class CustomIpGeolocationProvider : IIPGeolocation
+	public class CustomIpGeolocationProvider : IIPGeolocationProvider
 	{
 		public event LogDelegate Log;
 
@@ -11,6 +12,12 @@ namespace CustomIpGeolocationProvider
 		{
 
 			return string.Empty;
+		}
+
+		public Dictionary<string, string> Settings
+		{
+			get;
+			set;
 		}
 
 		public string ProviderName => "CustomIpGeolocationProvider";
