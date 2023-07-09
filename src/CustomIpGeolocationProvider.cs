@@ -10,6 +10,13 @@ namespace CustomIpGeolocationProvider
 
 		public string RunIpGeolocation(IPAddress address)
 		{
+			//this provider receives the signer IP address and must return geo-location information for that IP address.
+			//this information is then added to the envelope audit trail
+
+
+			//based on the provided IP address, retrieve the geo-location data here 
+
+
 
 			return string.Empty;
 		}
